@@ -11,7 +11,7 @@ The hard work is done by [Sci-Hub].
 
 You can load it as an unpacked extension in developer mode on Chrome. Follow this instructions:
 
-1. Clone this repo: `git clone git@github.com:allanino/sci-hub-fy.git`. Take note we're you cloned it.
+1. Clone this repo: `git clone git@github.com:allanino/sci-hub-fy.git`. Take note where you cloned it.
 2. Open Chrome and access `chrome://extensions`, or just open the menu -> settings -> extensions.
 3. Check the developer mode in upper right.
 4. Click "Load unpacked extension" button

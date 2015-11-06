@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Sci-Hub-Fy",
-  "description": "Free access to scientific articles through sci-hub.org service.",
+  "description": "Free access to scientific articles through sci-hub.io service.",
   "version": "1.0",
 
   "permissions": [

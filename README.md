@@ -18,4 +18,11 @@ You can load it as an unpacked extension in developer mode on Chrome. Follow thi
 5. Select the folder into which you cloned **Sci-Hub-Fy** and click "Open".
 6. We're done. The extension should be available as if installed from Chrome store.
 
+## Context menu
+
+Another way of using this extension is through the context menu (right-click):
+
+- Link context: if you right-click a link and select Sci-Hub-Fy, we append ".sci-hub.io" to the link and redirect you to it.
+- Page context: if you right-click anywhere but a link in a page, we append ".sci-hub.io" to the page's URL and redirect you to it (the same as clicking in the extension icon).
+
 [Sci-Hub]:http://sci-hub.io

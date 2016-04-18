@@ -3,12 +3,18 @@
 
   "name": "Sci-Hub-Fy",
   "description": "Free access to scientific articles through sci-hub.io service.",
-  "version": "1.0",
+  "version": "1.1",
 
   "permissions": [
      "activeTab",
-     "tabs"
+     "tabs",
+     "contextMenus"
   ],
+
+  "icons": {
+    "19": "icon.png",
+    "128": "icon_store.png"
+  },
 
   "browser_action": {
     "default_icon": "icon.png"

@@ -8,7 +8,13 @@ function appendSciHub(tab, link){
 
   console.log('Redirecting ' + tab.url + ' to ' + new_url);
 
-  chrome.tabs.update(tab.id, {url: new_url});
+  chrome.tabs.query({
+      active: true
+    }, tabs => {
+      let index = tabs[0].index;
+      chrome.tabs.create({index: index + 1, url: new_url});
+    }
+  );
 }
 
 // Setup extension click action

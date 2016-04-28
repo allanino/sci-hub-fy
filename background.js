@@ -1,25 +1,31 @@
 // Copyright (c) 2014 Allan Costa.
 
-function appendSciHub(tab, link){
-  // Tab is the tab to be redirected and link is the link to append sci-hub.io
-  var arr = link.split('/');
+function sciHubFy(link) {
+  // Append sci-hub.io to link's domain
+  let arr = link.split('/');
   arr[2] = arr[2] + ".sci-hub.io";
-  var new_url = arr.join('/');
+  return arr.join('/');
+}
 
-  console.log('Redirecting ' + tab.url + ' to ' + new_url);
-
+function newTabSciHubFy(tab, link) {
+  // Tab is the current tab and link is the link to append sci-hub.io
   chrome.tabs.query({
       active: true
     }, tabs => {
       let index = tabs[0].index;
-      chrome.tabs.create({index: index + 1, url: new_url});
+      chrome.tabs.create({index: index + 1, url: sciHubFy(link)});
     }
   );
 }
 
+function sameTabSciHubFy(tab, link) {
+  // Tab is the current tab and link is the link to append sci-hub.io
+  chrome.tabs.update(tab.id, {url: sciHubFy(link)});
+}
+
 // Setup extension click action
 chrome.browserAction.onClicked.addListener(function(tab) {
-  appendSciHub(tab, tab.url);
+  sameTabSciHubFy(tab, tab.url);
 });
 
 // Setup context menu actions
@@ -38,8 +44,8 @@ chrome.runtime.onInstalled.addListener(function() {
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
     if (info.menuItemId === "page") { // here's where you'll need the ID
-      appendSciHub(tab, tab.url);
+      sameTabSciHubFy(tab, tab.url);
     } else if (info.menuItemId === "link") {
-      appendSciHub(tab, info.linkUrl);
+      newTabSciHubFy(tab, info.linkUrl);
     };
 });

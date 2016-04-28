@@ -1,28 +1,45 @@
 // Copyright (c) 2014 Allan Costa.
 
-function sciHubFy(link) {
-  // Append sci-hub.io to link's domain
+function sciHubFy(link, sciHubDomain) {
+  // Append Sci-Hub domain to link's domain
   let arr = link.split('/');
-  arr[2] = arr[2] + ".sci-hub.io";
-  return arr.join('/');
+  arr[2] = arr[2] + "." + sciHubDomain;
+  return arr.join('/');;
 }
 
 function newTabSciHubFy(tab, link) {
   // Tab is the current tab and link is the link to append sci-hub.io
-  chrome.tabs.query({
-      active: true
-    }, tabs => {
-      let index = tabs[0].index;
-      chrome.tabs.create({index: index + 1, url: sciHubFy(link)});
-    }
-  );
+  chrome.storage.sync.get({
+    domain: 'sci-hub.io'  // Default domain
+  }, function(items) {
+    chrome.tabs.query({
+        active: true
+      }, tabs => {
+        let index = tabs[0].index;
+        chrome.tabs.create({index: index + 1, url: sciHubFy(link, items.domain)});
+      }
+    );
+  });
 }
 
 function sameTabSciHubFy(tab, link) {
   // Tab is the current tab and link is the link to append sci-hub.io
-  chrome.tabs.update(tab.id, {url: sciHubFy(link)});
+  chrome.storage.sync.get({
+    domain: 'sci-hub.io' // Default domain
+  }, function(items) {
+    chrome.tabs.update(tab.id, {url: sciHubFy(link, items.domain)});
+  });
 }
 
+function openOptions(){
+  if (chrome.runtime.openOptionsPage) {
+  // New way to open options pages, if supported (Chrome 42+).
+  chrome.runtime.openOptionsPage();
+  } else {
+    // Reasonable fallback.
+    window.open(chrome.runtime.getURL('options.html'));
+  }
+}
 // Setup extension click action
 chrome.browserAction.onClicked.addListener(function(tab) {
   sameTabSciHubFy(tab, tab.url);

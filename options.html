@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Sci-Hub-Fy Options</title></head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sci-Hub-Fy Options</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
   <body>
-    Sci-Hub domain: <input type="text" id="domain">
+    <form>
+      <h1>Set your Domain <br> for Sci-Hub Services</h1>
+      <input placeholder="Domain (e.g. sci-hub.cc)" type="text" required="" id="domain">
+      <p class="label">Domain (e.g. sci-hub.cc)</p>
+      <button class="ripple" id="save">Save</button>
+    </form>
 
-    <div id="status"></div>
-    <button id="save">Save</button>
+    <a class="follow" href="https://github.com/allanino/sci-hub-fy" target="_blank"><i class="fa fa-github"></i>Fork me on GitHub</a>
 
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+
+    <script src='js/jquery.min.js'></script>
     <script src="options.js"></script>
   </body>
 </html>

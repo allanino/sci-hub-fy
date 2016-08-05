@@ -4,7 +4,7 @@ function sciHubFy(link, sciHubDomain) {
   // Append Sci-Hub domain to link's domain
   let arr = link.split('/');
   arr[2] = arr[2] + "." + sciHubDomain;
-  return arr.join('/');;
+  return arr.join('/');
 }
 
 function newTabSciHubFy(tab, link) {
@@ -64,5 +64,5 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       sameTabSciHubFy(tab, tab.url);
     } else if (info.menuItemId === "link") {
       newTabSciHubFy(tab, info.linkUrl);
-    };
+    }
 });

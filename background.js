@@ -2,9 +2,8 @@
 
 function sciHubFy(link, sciHubDomain) {
   // Append Sci-Hub domain to link's domain
-  let arr = link.split('/');
-  arr[2] = arr[2] + "." + sciHubDomain;
-  return arr.join('/');
+  var matches = link.match(/:\/\/(?:www\.)?(.[^/]+)(.*)/);
+  return "http://"+matches[1]+"."+sciHubDomain+matches[2];
 }
 
 function newTabSciHubFy(tab, link) {

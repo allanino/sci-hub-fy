@@ -9,7 +9,7 @@ function sciHubFy(link, sciHubDomain) {
 function newTabSciHubFy(tab, link) {
   // Tab is the current tab and link is the link to append sci-hub.io
   chrome.storage.sync.get({
-    domain: 'sci-hub.cc'  // Default domain
+    domain: 'sci-hub.bz // Updated default domain ( As of DEC 03 - 2017 )
   }, function(items) {
     chrome.tabs.query({
         active: true
@@ -24,7 +24,7 @@ function newTabSciHubFy(tab, link) {
 function sameTabSciHubFy(tab, link) {
   // Tab is the current tab and link is the link to append sci-hub.io
   chrome.storage.sync.get({
-    domain: 'sci-hub.cc' // Default domain
+    domain: 'sci-hub.bz' // Updated default domain ( As of DEC 03 - 2017 )
   }, function(items) {
     chrome.tabs.update(tab.id, {url: sciHubFy(link, items.domain)});
   });

@@ -1,7 +1,7 @@
 Sci-Hub-Fy
 ==========
 
-Chrome extension that appends ".sci-hub.cc" to active tab domain, allowing free access to scientific articles.
+Chrome extension that appends ".sci-hub.bz" to active tab domain, allowing free access to scientific articles.
 
 The hard work is done by [Sci-Hub].
 
@@ -22,7 +22,7 @@ You can load it as an unpacked extension in developer mode on Chrome. Follow thi
 
 Another way of using this extension is through the context menu (right-click):
 
-- Link context: if you right-click a link and select Sci-Hub-Fy, we append ".sci-hub.cc" to the link and redirect you to it.
-- Page context: if you right-click anywhere but a link in a page, we append ".sci-hub.cc" to the page's URL and redirect you to it (the same as clicking in the extension icon).
+- Link context: if you right-click a link and select Sci-Hub-Fy, we append ".sci-hub.bz" to the link and redirect you to it.
+- Page context: if you right-click anywhere but a link in a page, we append ".sci-hub.bz" to the page's URL and redirect you to it (the same as clicking in the extension icon).
 
-[Sci-Hub]:http://sci-hub.cc
+[Sci-Hub]:http://sci-hub.bz

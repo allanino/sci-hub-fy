@@ -9,7 +9,7 @@ function sciHubFy(link, sciHubDomain) {
 function newTabSciHubFy(tab, link) {
   // Tab is the current tab and link is the link to append sci-hub.io
   chrome.storage.sync.get({
-    domain: 'sci-hub.bz // Updated default domain ( As of DEC 03 - 2017 )
+    domain: 'sci-hub.bz' // Updated default domain ( As of DEC 03 - 2017 )
   }, function(items) {
     chrome.tabs.query({
         active: true

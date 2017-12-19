@@ -3,7 +3,7 @@
 
   "name": "Sci-Hub-Fy",
   "description": "Free access to scientific articles through Sci-Hub service.",
-  "version": "1.5",
+  "version": "1.6",
 
   "permissions": [
      "activeTab",

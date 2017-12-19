@@ -7,9 +7,9 @@ function save_options() {
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
-  // Use default value domain = 'sci-hub.cc'
+  // Use default value domain = 'sci-hub.tw'
   chrome.storage.sync.get({
-    domain: 'sci-hub.cc'
+    domain: 'sci-hub.tw'
   }, function(items) {
     document.getElementById('domain').value = items.domain;
   });

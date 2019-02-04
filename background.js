@@ -1,9 +1,8 @@
 // Copyright (c) 2014 Allan Costa.
 
 function sciHubFy(link, sciHubDomain) {
-  // Append Sci-Hub domain to link's domain
-  var matches = link.match(/:\/\/(?:www\.)?(.[^/]+)(.*)/);
-  return "http://" + matches[1] + "." + sciHubDomain + matches[2];
+  // Use the link to search on Sci-Hub
+  return "http://" + sciHubDomain + '/' + link;
 }
 
 function newTabSciHubFy(tab, link) {

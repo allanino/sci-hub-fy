@@ -5,7 +5,7 @@ Chrome extension that passes URLs to Sci-Hub, allowing free access to scientific
 
 The hard work is done by [Sci-Hub].
 
-**Note:** The extension got removed from Chrome Store as they "don't allow products or services that facilitate unauthorized access to content on websites, such as circumventing paywalls or logins restrictions.". Of course you can just manually prepend "http://sci-hub.se/" to the URL, but if you still want to automate this, the instructions below should make it work.
+**Note:** The extension got removed from Chrome Store as they "don't allow products or services that facilitate unauthorized access to content on websites, such as circumventing paywalls or logins restrictions.". Of course you can just manually prepend "http://sci-hub.ru/" to the URL, but if you still want to automate this, the instructions below should make it work.
 
 ## Installation
 
@@ -22,7 +22,7 @@ You can load it as an unpacked extension in developer mode on Chrome. Follow thi
 
 Another way of using this extension is through the context menu (right-click):
 
-- Link context: if you right-click a link and select Sci-Hub-Fy, we prepend "http://sci-hub.se/" to the link and redirect you to it.
-- Page context: if you right-click anywhere but a link in a page, we prepend "http://sci-hub.se/" to the page's URL and redirect you to it (the same as clicking in the extension icon).
+- Link context: if you right-click a link and select Sci-Hub-Fy, we prepend "http://sci-hub.ru/" to the link and redirect you to it.
+- Page context: if you right-click anywhere but a link in a page, we prepend "http://sci-hub.ru/" to the page's URL and redirect you to it (the same as clicking in the extension icon).
 
-[Sci-Hub]:http://sci-hub.se
+[Sci-Hub]:http://sci-hub.ru

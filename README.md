@@ -18,11 +18,25 @@ You can load it as an unpacked extension in developer mode on Chrome. Follow thi
 5. Select the folder into which you cloned **Sci-Hub-Fy** and click "Open".
 6. We're done. The extension should be available as if installed from Chrome store.
 
+## Configuring Sci-Hub Domain
+
+Sci-Hub domains change frequently due to legal issues. The extension uses as default the latest working domain found on release, but you can customize it to use any active Sci-Hub domain.
+
+**To change the domain:**
+
+1. Right-click the **Sci-Hub-Fy** extension icon in Chrome toolbar
+2. Select **"Options"** from the menu, or
+3. Go to `chrome://extensions`, find **Sci-Hub-Fy**, and click **"Details"** → **"Extension options"**
+4. Enter the new domain (e.g., `sci-hub.se`, `sci-hub.st`, etc.) without `http://` or `https://`
+5. Click **"Save"**
+
+The extension will now use your custom domain for all Sci-Hub requests.
+
 ## Context menu
 
 Another way of using this extension is through the context menu (right-click):
 
-- Link context: if you right-click a link and select Sci-Hub-Fy, we prepend "http://sci-hub.ru/" to the link and redirect you to it.
-- Page context: if you right-click anywhere but a link in a page, we prepend "http://sci-hub.ru/" to the page's URL and redirect you to it (the same as clicking in the extension icon).
+- Link context: if you right-click a link and select Sci-Hub-Fy, we prepend "http://<configured-domain>/" to the link and redirect you to it.
+- Page context: if you right-click anywhere but a link in a page, we prepend "http://<configured-domain>/" to the page's URL and redirect you to it (the same as clicking in the extension icon).
 
 [Sci-Hub]:http://sci-hub.ru

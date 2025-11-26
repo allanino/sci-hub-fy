@@ -39,7 +39,7 @@ function openOptions(){
   }
 }
 // Setup extension click action
-chrome.browserAction.onClicked.addListener(function(tab) {
+chrome.action.onClicked.addListener(function(tab) {
   sameTabSciHubFy(tab, tab.url);
 });
 
